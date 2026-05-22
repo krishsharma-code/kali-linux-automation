@@ -4,17 +4,17 @@ A collection of Python and Bash scripts designed for local system and network au
 
 ## 📌 Overview
 
-This repository contains a suite of automation scripts that demonstrate core system administration and network diagnostic tasks. Whether you're managing local directories, monitoring logs, or analyzing network configurations, these scripts provide a solid foundation for automation in the terminal.
+This repository contains a suite of automation scripts that demonstrate core system administration and network diagnostic tasks. For better maintainability and organization, the tools are categorized into `python_scripts/` and `bash_scripts/` directories.
 
 ## 🛠️ Scripts Included
 
-### 🐍 Python Scripts
+### 🐍 Python Scripts (`python_scripts/`)
 - **01_create_system_directory.py**: Automates the creation of organized system directory structures.
 - **02_write_sample_logs.py**: Generates sample log files for testing and monitoring practice.
 - **03_run_basic_ping.py**: Performs a simple connectivity check against common targets (like Google DNS).
 - **04_list_directory_contents.py**: A utility to systematically list and inspect directory structures.
 
-### 🐚 Bash Scripts
+### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
 - **sys_info.sh**: Fetches and prints basic OS and kernel information.
 - **network_ping.sh**: Checks connectivity to a specific domain with 3 ping packets.
@@ -29,13 +29,13 @@ This repository contains a suite of automation scripts that demonstrate core sys
 ## 🚀 Usage
 
 ### Running Python Scripts
-Ensure you have Python 3 installed. Run any Python script using:
+Ensure you have Python 3 installed. Navigate to the `python_scripts/` directory and run:
 ```bash
 python3 <script_name>.py
 ```
 
 ### Running Bash Scripts
-Before running a bash script, you must grant it execution permissions:
+Before running a bash script, navigate to the `bash_scripts/` directory and grant it execution permissions:
 ```bash
 chmod +x <script_name>.sh
 ./<script_name>.sh
