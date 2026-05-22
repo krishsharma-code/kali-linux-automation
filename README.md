@@ -16,6 +16,15 @@ This repository contains a suite of automation scripts that demonstrate core sys
 
 ### 🐚 Bash Scripts
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
+- **sys_info.sh**: Fetches and prints basic OS and kernel information.
+- **network_ping.sh**: Checks connectivity to a specific domain with 3 ping packets.
+- **ip_fetcher.sh**: Automatically detects and displays the local IP address.
+- **dir_setup.sh**: Quickly sets up a standard project directory structure.
+- **file_backup.sh**: Creates a secure backup of any file with a '.bak' extension.
+- **disk_monitor.sh**: Monitors disk space usage in a human-readable format.
+- **open_ports.sh**: Lists all active listening network ports.
+- **user_greet.sh**: A friendly greeting script displaying the user and current time.
+- **mass_file_creator.sh**: Demonstrates automation by creating multiple test files at once.
 
 ## 🚀 Usage
 
@@ -25,13 +34,17 @@ Ensure you have Python 3 installed. Run any Python script using:
 python3 <script_name>.py
 ```
 
-### Running the Bash Script
-Before running the network analyzer, you must grant it execution permissions:
+### Running Bash Scripts
+Before running a bash script, you must grant it execution permissions:
 ```bash
-chmod +x local_net_analyzer.sh
-./local_net_analyzer.sh
+chmod +x <script_name>.sh
+./<script_name>.sh
 ```
-The script will generate a file named `local_net_report.txt` containing the analysis results.
+For example, to run the system info script:
+```bash
+chmod +x sys_info.sh
+./sys_info.sh
+```
 
 ## 🔒 Ethical Disclaimer
 
