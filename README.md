@@ -26,6 +26,15 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **user_greet.sh**: A friendly greeting script displaying the user and current time.
 - **mass_file_creator.sh**: Demonstrates automation by creating multiple test files at once.
 
+### 📁 [Day_02_File_Ops_Network_Recon](./Day_02_File_Ops_Network_Recon)
+*Core System Management & Network Fundamentals*
+- **File Permissions**: Mastering `chmod` and execution rights.
+- **Network Recon**: Using `ping` and `ip` for basic connectivity and address discovery.
+- **File Automation**: Scripting `touch`, `cp`, `mv`, and `rm`.
+- **Search & Filter**: Using `grep` for pattern matching in logs.
+- **System Maintenance**: Automated updates and process management (`ps aux`).
+- **User Discovery**: Gathering information on current user sessions and privileges.
+
 ## 🚀 Usage
 
 ### Running Python Scripts
