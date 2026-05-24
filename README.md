@@ -13,6 +13,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **02_write_sample_logs.py**: Generates sample log files for testing and monitoring practice.
 - **03_run_basic_ping.py**: Performs a simple connectivity check against common targets (like Google DNS).
 - **04_list_directory_contents.py**: A utility to systematically list and inspect directory structures.
+- **10_nmap_subprocess_wrapper.py**: (Day 3 Recon) Uses python to run and parse basic nmap scans.
+- **11_socket_banner_grabber.py**: (Day 3 Recon) Low-level socket connection to grab service banners.
+- **12_ping_sweep_threaded.py**: (Day 3 Recon) High-speed multi-threaded ping sweep for subnet discovery.
+- **13_mac_address_vendor.py**: (Day 3 Recon) Mock script for OUI-based MAC address vendor lookup.
+- **14_local_network_mapper.py**: (Day 3 Recon) Simulates mapping devices on a local subnet.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -25,6 +30,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **open_ports.sh**: Lists all active listening network ports.
 - **user_greet.sh**: A friendly greeting script displaying the user and current time.
 - **mass_file_creator.sh**: Demonstrates automation by creating multiple test files at once.
+- **16_netstat_active_ports.sh**: (Day 3 Recon) Filters netstat output for 'LISTEN' state services.
+- **17_ss_monitor.sh**: (Day 3 Recon) Utilizes the 'ss' command for socket statistics.
+- **18_nmap_fast_scan.sh**: (Day 3 Recon) Automates a fast-mode Nmap scan on a target.
+- **19_route_tracer.sh**: (Day 3 Recon) Path discovery tool using traceroute.
+- **20_arp_table_reader.sh**: (Day 3 Recon) Formats and displays the local ARP cache.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
