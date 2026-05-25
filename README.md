@@ -18,6 +18,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **12_ping_sweep_threaded.py**: (Day 3 Recon) High-speed multi-threaded ping sweep for subnet discovery.
 - **13_mac_address_vendor.py**: (Day 3 Recon) Mock script for OUI-based MAC address vendor lookup.
 - **14_local_network_mapper.py**: (Day 3 Recon) Simulates mapping devices on a local subnet.
+- **15_requests_fuzzer.py**: (Day 4 Web Recon) Basic directory fuzzing using Python requests.
+- **16_subdomain_bruteforce.py**: (Day 4 Web Recon) Checking a list of subdomains against a target.
+- **17_http_header_analyzer.py**: (Day 4 Web Recon) Extracting Server info and security headers.
+- **18_robots_txt_parser.py**: (Day 4 Web Recon) Fetch and parse disallowed paths in robots.txt.
+- **19_web_crawler_basic.py**: (Day 4 Web Recon) Extracting all href links from a webpage.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -35,6 +40,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **18_nmap_fast_scan.sh**: (Day 3 Recon) Automates a fast-mode Nmap scan on a target.
 - **19_route_tracer.sh**: (Day 3 Recon) Path discovery tool using traceroute.
 - **20_arp_table_reader.sh**: (Day 3 Recon) Formats and displays the local ARP cache.
+- **21_curl_header_grabber.sh**: (Day 4 Web Recon) Fast curl command to inspect headers.
+- **22_gobuster_automator.sh**: (Day 4 Web Recon) Automates a gobuster dirb scan with standard wordlists.
+- **23_nikto_fast_scan.sh**: (Day 4 Web Recon) Wrapper to run Nikto web scanner.
+- **24_wget_mirror.sh**: (Day 4 Web Recon) Script to download and mirror a basic website.
+- **25_whois_dns_lookup.sh**: (Day 4 Web Recon) Combines whois, dig, and nslookup for full target info.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
