@@ -23,6 +23,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **17_http_header_analyzer.py**: (Day 4 Web Recon) Extracting Server info and security headers.
 - **18_robots_txt_parser.py**: (Day 4 Web Recon) Fetch and parse disallowed paths in robots.txt.
 - **19_web_crawler_basic.py**: (Day 4 Web Recon) Extracting all href links from a webpage.
+- **20_apache_log_parser.py**: (Day 5 System Defense) Parses server access logs for 404/500 errors.
+- **21_failed_login_detector.py**: (Day 5 System Defense) Scans auth.log for repeated SSH failures.
+- **22_file_integrity_monitor.py**: (Day 5 System Defense) Monitors critical files using SHA-256 hashes.
+- **23_active_ports_analyzer.py**: (Day 5 System Defense) Lists local listening ports and processes.
+- **24_resource_spike_alert.py**: (Day 5 System Defense) Monitors CPU/RAM usage for anomalies.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -45,6 +50,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **23_nikto_fast_scan.sh**: (Day 4 Web Recon) Wrapper to run Nikto web scanner.
 - **24_wget_mirror.sh**: (Day 4 Web Recon) Script to download and mirror a basic website.
 - **25_whois_dns_lookup.sh**: (Day 4 Web Recon) Combines whois, dig, and nslookup for full target info.
+- **26_check_root_privileges.sh**: (Day 5 System Defense) Verifies root/sudo escalation rights.
+- **27_find_suid_binaries.sh**: (Day 5 System Defense) Locates SUID/SGID files for auditing.
+- **28_backup_critical_configs.sh**: (Day 5 System Defense) Automates secure backup of /etc files.
+- **29_ssh_config_auditor.sh**: (Day 5 System Defense) Audits sshd_config for hardening rules.
+- **30_firewall_status_checker.sh**: (Day 5 System Defense) Monitors UFW/Iptables rules and status.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
