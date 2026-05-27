@@ -28,6 +28,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **22_file_integrity_monitor.py**: (Day 5 System Defense) Monitors critical files using SHA-256 hashes.
 - **23_active_ports_analyzer.py**: (Day 5 System Defense) Lists local listening ports and processes.
 - **24_resource_spike_alert.py**: (Day 5 System Defense) Monitors CPU/RAM usage for anomalies.
+- **31_ping_sweeper.py**: (Day 6 Network Reconnaissance) Uses subprocess to find live hosts in a /24 subnet.
+- **32_basic_port_scanner.py**: (Day 6 Network Reconnaissance) Socket-based TCP scanner for common ports.
+- **33_banner_grabber.py**: (Day 6 Network Reconnaissance) Connects to ports to retrieve service banners.
+- **34_nmap_xml_parser.py**: (Day 6 Network Reconnaissance) Extracts open ports and services from Nmap XML output.
+- **35_mac_address_vendor_lookup.py**: (Day 6 Network Reconnaissance) Looks up device vendors using MAC address APIs.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -55,6 +60,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **28_backup_critical_configs.sh**: (Day 5 System Defense) Automates secure backup of /etc files.
 - **29_ssh_config_auditor.sh**: (Day 5 System Defense) Audits sshd_config for hardening rules.
 - **30_firewall_status_checker.sh**: (Day 5 System Defense) Monitors UFW/Iptables rules and status.
+- **36_quick_nmap_scan.sh**: (Day 6 Network Reconnaissance) Fast scan of the top 100 common ports.
+- **37_full_tcp_syn_scan.sh**: (Day 6 Network Reconnaissance) Stealthy SYN scan of all 65535 ports.
+- **38_dns_enum_script.sh**: (Day 6 Network Reconnaissance) Forward and reverse DNS lookup automation.
+- **39_arp_discovery.sh**: (Day 6 Network Reconnaissance) Identifies local devices using ARP requests.
+- **40_ssl_cert_checker.sh**: (Day 6 Network Reconnaissance) Checks SSL certificate expiration and details.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
