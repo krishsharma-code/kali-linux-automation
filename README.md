@@ -33,6 +33,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **33_banner_grabber.py**: (Day 6 Network Reconnaissance) Connects to ports to retrieve service banners.
 - **34_nmap_xml_parser.py**: (Day 6 Network Reconnaissance) Extracts open ports and services from Nmap XML output.
 - **35_mac_address_vendor_lookup.py**: (Day 6 Network Reconnaissance) Looks up device vendors using MAC address APIs.
+- **41_auth_log_parser.py**: (Day 7 Defensive Monitoring) Parses a mock auth.log to count failed SSH login attempts.
+- **42_file_integrity_monitor.py**: (Day 7 Defensive Monitoring) Generates SHA-256 hashes of critical files and alerts on changes.
+- **43_malicious_ip_blocker.py**: (Day 7 Defensive Monitoring) Reads bad IPs and generates UFW block commands.
+- **44_suspicious_process_hunter.py**: (Day 7 Defensive Monitoring) Finds processes running from unusual directories like /tmp.
+- **45_yara_rule_generator.py**: (Day 7 Defensive Monitoring) Generates basic YARA rule syntax for signature matching.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -65,6 +70,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **38_dns_enum_script.sh**: (Day 6 Network Reconnaissance) Forward and reverse DNS lookup automation.
 - **39_arp_discovery.sh**: (Day 6 Network Reconnaissance) Identifies local devices using ARP requests.
 - **40_ssl_cert_checker.sh**: (Day 6 Network Reconnaissance) Checks SSL certificate expiration and details.
+- **46_active_connections_monitor.sh**: (Day 7 Defensive Monitoring) Lists established connections and their PIDs using netstat/ss.
+- **47_suid_guid_finder.sh**: (Day 7 Defensive Monitoring) Finds files with SUID/GUID bits set to audit priv-esc risks.
+- **48_firewall_status_check.sh**: (Day 7 Defensive Monitoring) Checks UFW/iptables status and dumps rules to a log.
+- **49_cronjob_auditor.sh**: (Day 7 Defensive Monitoring) Lists all scheduled cron jobs to check for persistence.
+- **50_system_baseline_snapshot.sh**: (Day 7 Defensive Monitoring) Takes a snapshot of installed packages and services.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
