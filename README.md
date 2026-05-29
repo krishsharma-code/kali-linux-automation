@@ -75,6 +75,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **48_firewall_status_check.sh**: (Day 7 Defensive Monitoring) Checks UFW/iptables status and dumps rules to a log.
 - **49_cronjob_auditor.sh**: (Day 7 Defensive Monitoring) Lists all scheduled cron jobs to check for persistence.
 - **50_system_baseline_snapshot.sh**: (Day 7 Defensive Monitoring) Takes a snapshot of installed packages and services.
+- **56_nmap_quick_scan_wrapper.sh**: (Day 8 Enumeration) Automates an Nmap fast scan and outputs clean results to a file.
+- **57_dns_enum_tool.sh**: (Day 8 Enumeration) Uses 'host' and 'dig' to extract DNS records like A, MX, and TXT.
+- **58_whois_ip_lookup.sh**: (Day 8 Enumeration) Takes a list of IPs and runs 'whois' to extract organizational data.
+- **59_ping_sweep_subnet.sh**: (Day 8 Enumeration) Simple bash loop to ping all hosts in a /24 subnet to find live machines.
+- **60_banner_grabber_netcat.sh**: (Day 8 Enumeration) Automates 'nc' to connect to a specific port and grab service banners.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
@@ -111,3 +116,4 @@ chmod +x sys_info.sh
 ## 🔒 Ethical Disclaimer
 
 This toolkit is strictly for **educational, local system administration, and authorized testing purposes only**. Unauthorized use of these scripts against systems you do not have explicit permission to test is strictly prohibited. The author assumes no liability for misuse or damage caused by these tools.
+ility for misuse or damage caused by these tools.
