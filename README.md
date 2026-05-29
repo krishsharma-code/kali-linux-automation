@@ -38,6 +38,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **43_malicious_ip_blocker.py**: (Day 7 Defensive Monitoring) Reads bad IPs and generates UFW block commands.
 - **44_suspicious_process_hunter.py**: (Day 7 Defensive Monitoring) Finds processes running from unusual directories like /tmp.
 - **45_yara_rule_generator.py**: (Day 7 Defensive Monitoring) Generates basic YARA rule syntax for signature matching.
+- **51_http_header_analyzer.py**: (Day 8 Web Recon) Fetches HTTP headers using the 'requests' library to find server versions.
+- **52_robots_txt_scraper.py**: (Day 8 Web Recon) Downloads and parses a site's robots.txt to find hidden directories.
+- **53_subdomain_bruteforcer_mock.py**: (Day 8 Web Recon) Reads a wordlist and tests common subdomains against a target domain.
+- **54_ssl_cert_checker.py**: (Day 8 Web Recon) Uses 'ssl' and 'socket' libraries to pull and read an SSL/TLS certificate's expiration date.
+- **55_directory_fuzzer_lite.py**: (Day 8 Web Recon) Lightweight script that checks for common admin/login paths returning 200 OK statuses.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
