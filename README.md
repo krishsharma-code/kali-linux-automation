@@ -43,6 +43,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **53_subdomain_bruteforcer_mock.py**: (Day 8 Web Recon) Reads a wordlist and tests common subdomains against a target domain.
 - **54_ssl_cert_checker.py**: (Day 8 Web Recon) Uses 'ssl' and 'socket' libraries to pull and read an SSL/TLS certificate's expiration date.
 - **55_directory_fuzzer_lite.py**: (Day 8 Web Recon) Lightweight script that checks for common admin/login paths returning 200 OK statuses.
+- **61_ssh_log_analyzer.py**: (Day 9 Forensics and Hardening) Parses a mock auth.log file to extract IP addresses with multiple failed SSH login attempts.
+- **62_malware_hash_checker.py**: (Day 9 Forensics and Hardening) Calculates SHA-256 hashes of files in a directory and compares them against a known mock signature list.
+- **63_packet_sniffer_scapy_basic.py**: (Day 9 Forensics and Hardening) A basic script using Scapy to capture and print summary details of local network packets.
+- **64_steganography_detector.py**: (Day 9 Forensics and Hardening) Analyzes image file structures to detect hidden data appended to the End-of-File marker.
+- **65_termux_environment_checker.py**: (Day 9 Forensics and Hardening) Validates missing packages, network tools, and file paths specific to a Termux mobile environment.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -85,6 +90,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **58_whois_ip_lookup.sh**: (Day 8 Enumeration) Takes a list of IPs and runs 'whois' to extract organizational data.
 - **59_ping_sweep_subnet.sh**: (Day 8 Enumeration) Simple bash loop to ping all hosts in a /24 subnet to find live machines.
 - **60_banner_grabber_netcat.sh**: (Day 8 Enumeration) Automates 'nc' to connect to a specific port and grab service banners.
+- **66_kali_usb_persistence_check.sh**: (Day 9 Forensics and Hardening) A script to verify the partition health and mounting status of a 256GB persistent Kali Linux flash drive.
+- **67_active_connections_monitor.sh**: (Day 9 Forensics and Hardening) Wraps ss or netstat to continuously log suspicious outbound connections.
+- **68_file_integrity_monitor.sh**: (Day 9 Forensics and Hardening) A script designed for a cron job that checks the hashes of critical system files and alerts on changes.
+- **69_firewall_iptables_setup.sh**: (Day 9 Forensics and Hardening) Automates the configuration of basic defensive iptables rules to drop inbound traffic while allowing established connections.
+- **70_suspicious_process_hunter.sh**: (Day 9 Forensics and Hardening) Scans running processes to identify unusually high resource usage or suspicious execution paths.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
