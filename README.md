@@ -48,6 +48,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **63_packet_sniffer_scapy_basic.py**: (Day 9 Forensics and Hardening) A basic script using Scapy to capture and print summary details of local network packets.
 - **64_steganography_detector.py**: (Day 9 Forensics and Hardening) Analyzes image file structures to detect hidden data appended to the End-of-File marker.
 - **65_termux_environment_checker.py**: (Day 9 Forensics and Hardening) Validates missing packages, network tools, and file paths specific to a Termux mobile environment.
+- **71_cve_database_lookup.py**: (Day 10 Vulnerability Scanning) Queries a mock local JSON database for CVE details based on user input.
+- **72_port_scanner_banner_grab.py**: (Day 10 Vulnerability Scanning) A multi-threaded socket script to scan ports and grab service banners.
+- **73_subdomain_takeover_check.py**: (Day 10 Vulnerability Scanning) Checks a list of subdomains for common CNAME dangling errors.
+- **74_pdf_vuln_report_gen.py**: (Day 10 Vulnerability Scanning) Uses a lightweight mock logic to format scan results into a readable text/PDF structure.
+- **75_api_endpoint_fuzzer.py**: (Day 10 Vulnerability Scanning) Fuzzes a mock target URL with common API paths looking for 200 OK responses.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -95,6 +100,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **68_file_integrity_monitor.sh**: (Day 9 Forensics and Hardening) A script designed for a cron job that checks the hashes of critical system files and alerts on changes.
 - **69_firewall_iptables_setup.sh**: (Day 9 Forensics and Hardening) Automates the configuration of basic defensive iptables rules to drop inbound traffic while allowing established connections.
 - **70_suspicious_process_hunter.sh**: (Day 9 Forensics and Hardening) Scans running processes to identify unusually high resource usage or suspicious execution paths.
+- **76_nmap_vuln_automator.sh**: (Day 10 Vulnerability Scanning) Wraps Nmap with the --script vuln flag and formats the output.
+- **77_nikto_web_scanner_wrapper.sh**: (Day 10 Vulnerability Scanning) Automates Nikto scans against a target and saves output to a timestamped file.
+- **78_wp_scan_updater.sh**: (Day 10 Vulnerability Scanning) A script that safely updates WPScan databases and runs a basic enumeration scan.
+- **79_ssh_audit_tool.sh**: (Day 10 Vulnerability Scanning) Checks local SSH configuration files for weak ciphers and root login permissions.
+- **80_daily_security_summary.sh**: (Day 10 Vulnerability Scanning) Compiles logs from previous scripts and outputs a daily executive summary.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
