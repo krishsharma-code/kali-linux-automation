@@ -53,6 +53,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **73_subdomain_takeover_check.py**: (Day 10 Vulnerability Scanning) Checks a list of subdomains for common CNAME dangling errors.
 - **74_pdf_vuln_report_gen.py**: (Day 10 Vulnerability Scanning) Uses a lightweight mock logic to format scan results into a readable text/PDF structure.
 - **75_api_endpoint_fuzzer.py**: (Day 10 Vulnerability Scanning) Fuzzes a mock target URL with common API paths looking for 200 OK responses.
+- **81_passwd_file_analyzer.py**: (Day 11 Local Enumeration) Reads /etc/passwd and extracts users with interactive shell access.
+- **82_cron_job_parser.py**: (Day 11 Local Enumeration) Simulates parsing crontab files to identify potentially vulnerable scheduled tasks.
+- **83_log_file_monitor.py**: (Day 11 Local Enumeration) A script that tails a mock auth.log file and alerts on failed SSH logins.
+- **84_file_hash_checker.py**: (Day 11 Local Enumeration) Calculates SHA-256 hashes of critical system binaries to check for tampering.
+- **85_network_interface_auditor.py**: (Day 11 Local Enumeration) Uses the os and subprocess modules to list active interfaces and check promiscuous mode.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -105,6 +110,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **78_wp_scan_updater.sh**: (Day 10 Vulnerability Scanning) A script that safely updates WPScan databases and runs a basic enumeration scan.
 - **79_ssh_audit_tool.sh**: (Day 10 Vulnerability Scanning) Checks local SSH configuration files for weak ciphers and root login permissions.
 - **80_daily_security_summary.sh**: (Day 10 Vulnerability Scanning) Compiles logs from previous scripts and outputs a daily executive summary.
+- **86_suid_binary_finder.sh**: (Day 11 Local Enumeration) Finds all files on the system with the SUID bit set and saves the list.
+- **87_open_ports_enumerator.sh**: (Day 11 Local Enumeration) Uses ss or netstat to list all listening ports and the associated PIDs.
+- **88_sudo_privilege_checker.sh**: (Day 11 Local Enumeration) Automates running sudo -l and parsing the output for NOPASSWD entries.
+- **89_system_info_gatherer.sh**: (Day 11 Local Enumeration) Collects kernel version, hostname, and OS release info into a single recon file.
+- **90_clear_logs_simulator.sh**: (Day 11 Local Enumeration) A script that demonstrates how threat actors clear bash history and wtmp logs, strictly for defensive understanding.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
