@@ -58,6 +58,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **83_log_file_monitor.py**: (Day 11 Local Enumeration) A script that tails a mock auth.log file and alerts on failed SSH logins.
 - **84_file_hash_checker.py**: (Day 11 Local Enumeration) Calculates SHA-256 hashes of critical system binaries to check for tampering.
 - **85_network_interface_auditor.py**: (Day 11 Local Enumeration) Uses the os and subprocess modules to list active interfaces and check promiscuous mode.
+- **91_subnet_mask_parser.py**: (Day 12 System and Network Enumeration) Parses CIDR notation and calculates network range and host limits.
+- **92_live_host_ping_sweep.py**: (Day 12 System and Network Enumeration) Threaded ICMP sweep to discover active network nodes.
+- **93_mac_address_spoof_automator.py**: (Day 12 System and Network Enumeration) Safely rotates hardware MAC addresses for anonymity.
+- **94_dns_recon_resolver.py**: (Day 12 System and Network Enumeration) Resolves standard DNS records (A, MX, TXT) for target mapping.
+- **95_socket_banner_grabber.py**: (Day 12 System and Network Enumeration) Fingerprints service versions using low-level socket connections.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -115,6 +120,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **88_sudo_privilege_checker.sh**: (Day 11 Local Enumeration) Automates running sudo -l and parsing the output for NOPASSWD entries.
 - **89_system_info_gatherer.sh**: (Day 11 Local Enumeration) Collects kernel version, hostname, and OS release info into a single recon file.
 - **90_clear_logs_simulator.sh**: (Day 11 Local Enumeration) A script that demonstrates how threat actors clear bash history and wtmp logs, strictly for defensive understanding.
+- **96_active_connections_monitor.sh**: (Day 12 System and Network Enumeration) Alerts on new unauthorized established TCP connections.
+- **97_iptables_firewall_reset.sh**: (Day 12 System and Network Enumeration) Resets firewall rules to a secure default-deny posture.
+- **98_arp_cache_poison_detector.sh**: (Day 12 System and Network Enumeration) Detects duplicate MAC addresses in ARP table to warn of spoofing.
+- **99_wireless_interface_auditor.sh**: (Day 12 System and Network Enumeration) Evaluates wireless card modes and monitor capabilities.
+- **100_network_recon_bundle.sh**: (Day 12 System and Network Enumeration) Aggregates interface, routing, and DNS data into a forensic dump.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
