@@ -63,6 +63,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **93_mac_address_spoof_automator.py**: (Day 12 System and Network Enumeration) Safely rotates hardware MAC addresses for anonymity.
 - **94_dns_recon_resolver.py**: (Day 12 System and Network Enumeration) Resolves standard DNS records (A, MX, TXT) for target mapping.
 - **95_socket_banner_grabber.py**: (Day 12 System and Network Enumeration) Fingerprints service versions using low-level socket connections.
+- **101_process_anomaly_hunter.py**: (Day 13 Local System Hardening) Inspects /proc for unlinked binaries and suspicious execution paths.
+- **102_shadow_file_integrity.py**: (Day 13 Local System Hardening) Audits /etc/shadow permissions and ownership against security standards.
+- **103_netstat_log_parser.py**: (Day 13 Local System Hardening) Detects unprivileged ports binding to public interfaces.
+- **104_systemd_service_auditor.py**: (Day 13 Local System Hardening) Identifies services running from non-standard or risky file paths.
+- **105_api_key_leak_scanner.py**: (Day 13 Local System Hardening) Regex-based scanner for hardcoded API keys and secrets in code.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -125,6 +130,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **98_arp_cache_poison_detector.sh**: (Day 12 System and Network Enumeration) Detects duplicate MAC addresses in ARP table to warn of spoofing.
 - **99_wireless_interface_auditor.sh**: (Day 12 System and Network Enumeration) Evaluates wireless card modes and monitor capabilities.
 - **100_network_recon_bundle.sh**: (Day 12 System and Network Enumeration) Aggregates interface, routing, and DNS data into a forensic dump.
+- **106_ufw_rules_compiler.sh**: (Day 13 Local System Hardening) Compiles net rules, clears dangling entries, and hardens connection tables.
+- **107_ssh_bruteforce_defense.sh**: (Day 13 Local System Hardening) Dynamically blacklists malicious IPs from auth logs.
+- **108_kernel_parameter_tuner.sh**: (Day 13 Local System Hardening) Hardens kernel stack to prevent spoofing and redirects.
+- **109_untrusted_ppa_purger.sh**: (Day 13 Local System Hardening) Verifies repository signatures and purges untrusted sources.
+- **110_auditd_report_aggregator.sh**: (Day 13 Local System Hardening) Compiles core logs and environment snapshots into a locked report.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
