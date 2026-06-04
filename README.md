@@ -68,6 +68,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **103_netstat_log_parser.py**: (Day 13 Local System Hardening) Detects unprivileged ports binding to public interfaces.
 - **104_systemd_service_auditor.py**: (Day 13 Local System Hardening) Identifies services running from non-standard or risky file paths.
 - **105_api_key_leak_scanner.py**: (Day 13 Local System Hardening) Regex-based scanner for hardcoded API keys and secrets in code.
+- **111_subnet_ping_sweeper.py**: (Day 14 Network & Environment Sec) Rapid multi-threaded ping sweep for host discovery.
+- **112_port_banner_grabber.py**: (Day 14 Network & Environment Sec) Service fingerprinting and banner grabbing for vulnerability mapping.
+- **113_mac_address_spoofer.py**: (Day 14 Network & Environment Sec) Randomizes and assigns new MAC addresses to local interfaces.
+- **114_dns_zone_transfer_check.py**: (Day 14 Network & Environment Sec) Attempts AXFR transfers to map domain internal topographies.
+- **115_termux_environment_mapper.py**: (Day 14 Network & Environment Sec) Audits permissions and tools in mobile Termux environments.
 
 ### 🐚 Bash Scripts (`bash_scripts/`)
 - **local_net_analyzer.sh**: A powerful network diagnostic script that gathers IP information, routing tables, and active listening services into a consolidated report.
@@ -135,6 +140,11 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **108_kernel_parameter_tuner.sh**: (Day 13 Local System Hardening) Hardens kernel stack to prevent spoofing and redirects.
 - **109_untrusted_ppa_purger.sh**: (Day 13 Local System Hardening) Verifies repository signatures and purges untrusted sources.
 - **110_auditd_report_aggregator.sh**: (Day 13 Local System Hardening) Compiles core logs and environment snapshots into a locked report.
+- **116_iptables_reset_secure.sh**: (Day 14 Network & Environment Sec) Hardens iptables with a strict default-drop security policy.
+- **117_rogue_process_killer.sh**: (Day 14 Network & Environment Sec) Terminates high-CPU background processes without a TTY.
+- **118_cronjob_auditor.sh**: (Day 14 Network & Environment Sec) Scans system/user cronjobs for suspicious persistence entries.
+- **119_usb_autorun_blocker.sh**: (Day 14 Network & Environment Sec) Prevents automated mounting and execution from USB devices.
+- **120_kali_update_cleaner.sh**: (Day 14 Network & Environment Sec) Performs deep maintenance, updates, and package cache cleaning.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
