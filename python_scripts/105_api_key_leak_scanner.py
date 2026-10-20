@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 def scan_for_secrets(directory):
     """
@@ -49,5 +50,4 @@ def scan_for_secrets(directory):
 
 if __name__ == "__main__":
     target_dir = sys.argv[1] if len(sys.argv) > 1 else "."
-    import sys
     scan_for_secrets(target_dir)
