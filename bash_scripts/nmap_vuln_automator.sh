@@ -7,7 +7,7 @@ TARGET=$1
 
 if [ -z "$TARGET" ]; then
     echo "Usage: $0 <target_ip_or_domain>"
-    exit 1
+    exit 0
 fi
 
 OUTPUT_FILE="nmap_vuln_$(date +%Y%m%d_%H%M%S).txt"

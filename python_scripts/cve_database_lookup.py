@@ -36,6 +36,11 @@ def lookup_cve(cve_id):
         print(f"[-] No record found for {cve_id}.")
 
 if __name__ == "__main__":
+    import sys
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print("Usage: python3 cve_database_lookup.py")
+        print("Looks up CVE details from the built-in mock database (interactive prompt).")
+        sys.exit(0)
     print("--- CVE Database Lookup Tool ---")
     user_input = input("Enter CVE ID (e.g., CVE-2021-44228): ").strip()
     lookup_cve(user_input)

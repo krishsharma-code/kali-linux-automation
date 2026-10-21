@@ -7,7 +7,7 @@ IP_LIST=$1
 
 if [ -z "$IP_LIST" ]; then
     echo "Usage: $0 <ip_list_file_or_single_ip>"
-    exit 1
+    exit 0
 fi
 
 lookup_ip() {

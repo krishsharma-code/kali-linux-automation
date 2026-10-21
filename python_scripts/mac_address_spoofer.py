@@ -38,9 +38,15 @@ def get_current_mac(interface):
 
 def main():
     parser = argparse.ArgumentParser(description="MAC Address Spoofer")
-    parser.add_argument("interface", help="Interface to change MAC for (e.g., eth0, wlan0)")
+    parser.add_argument("interface", nargs="?", default=None,
+                        help="Interface to change MAC for (e.g., eth0, wlan0)")
     parser.add_argument("--mac", help="New MAC address (random if not specified)")
     args = parser.parse_args()
+
+    if not args.interface:
+        print("[!] No interface supplied.")
+        print("    Usage: mac_address_spoofer.py <interface> [--mac XX:XX:XX:XX:XX:XX]")
+        return
 
     interface = args.interface
     new_mac = args.mac if args.mac else get_random_mac()

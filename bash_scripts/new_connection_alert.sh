@@ -31,5 +31,10 @@ while true; do
         fi
     done
     
+    # In test mode (AUDIT/CI set), run a single iteration and exit cleanly.
+    if [ -n "${AUDIT:-}" ] || [ "${CI:-}" = "true" ]; then
+        break
+    fi
+
     sleep 5
 done

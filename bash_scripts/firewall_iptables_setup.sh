@@ -1,4 +1,10 @@
 #!/bin/bash
+# SAFE_HELP_GUARD: non-destructive --help (exits before any state change).
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+    echo "Usage: $(basename "$0") [options]"
+    echo "This is a state-changing tool. --help makes no changes and exits."
+    exit 0
+fi
 # firewall_iptables_setup.sh - Basic defensive firewall configuration.
 # Day 9: Forensics and Hardening
 

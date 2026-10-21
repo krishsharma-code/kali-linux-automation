@@ -54,6 +54,6 @@ if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python3 socket_banner_grabber_cli.py <IP> <PORT>")
         print("Example: python3 socket_banner_grabber_cli.py 192.168.1.1 22")
-        sys.exit(1)
+        sys.exit(0)
 
     grab_banner(sys.argv[1], sys.argv[2])

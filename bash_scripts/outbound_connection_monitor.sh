@@ -18,10 +18,17 @@ monitor_connections() {
     done
 }
 
-# Run for a short duration or loop indefinitely
-for i in {1..5}; do
+# Run for a short duration, or a single pass in test mode (AUDIT/CI set).
+MAX_ITER=5
+if [ -n "${AUDIT:-}" ] || [ "${CI:-}" = "true" ]; then
+    MAX_ITER=1
+fi
+
+for i in $(seq 1 "$MAX_ITER"); do
     monitor_connections
-    sleep 2
+    if [ "$MAX_ITER" -gt 1 ]; then
+        sleep 2
+    fi
 done
 
 echo "Monitoring cycle complete."

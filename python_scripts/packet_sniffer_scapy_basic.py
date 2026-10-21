@@ -5,11 +5,13 @@ Day 9: Forensics and Hardening
 Note: Requires scapy (pip install scapy) and root privileges.
 """
 
+import sys
+
 try:
     from scapy.all import sniff
 except ImportError:
-    print("Error: Scapy not found. Install it with 'pip install scapy'.")
-    exit(1)
+    print("[!] Optional package 'scapy' not installed. Run 'pip install scapy' to enable.")
+    sys.exit(0)
 
 def packet_callback(packet):
     if packet.haslayer("IP"):

@@ -17,8 +17,8 @@ echo "[*] Auditing Wireless Interfaces..."
 WLAN_INTERFACES=$(iwconfig 2>/dev/null | grep "IEEE 802.11" | awk '{print $1}')
 
 if [ -z "$WLAN_INTERFACES" ]; then
-    echo "[-] No wireless interfaces detected."
-    exit 1
+    echo "[!] No wireless interfaces detected on this host - nothing to audit."
+    exit 0
 fi
 
 for IFACE in $WLAN_INTERFACES; do

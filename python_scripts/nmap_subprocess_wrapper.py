@@ -19,5 +19,9 @@ def run_nmap(target):
         print(f"[!] Error: Nmap scan failed. {e}")
 
 if __name__ == "__main__":
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print("Usage: python3 nmap_subprocess_wrapper.py")
+        print("Runs a fast nmap scan against a target (interactive prompt).")
+        sys.exit(0)
     target_ip = input("Enter target IP or hostname (e.g., 127.0.0.1): ") or "127.0.0.1"
     run_nmap(target_ip)

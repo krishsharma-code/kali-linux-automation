@@ -1,4 +1,10 @@
 #!/bin/bash
+# SAFE_HELP_GUARD: non-destructive --help (exits before any state change).
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+    echo "Usage: $(basename "$0") [options]"
+    echo "This is a state-changing tool. --help makes no changes and exits."
+    exit 0
+fi
 
 # SSH Brute Force Defense
 # Parses syslog logs streams dynamically, blacklisting malicious source IPs manipulating authentication hooks.

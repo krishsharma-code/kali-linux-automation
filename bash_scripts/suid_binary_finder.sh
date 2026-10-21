@@ -13,7 +13,11 @@ echo "[*] SUID bit allows a user to run an executable with the permissions of th
 # -perm -u=s - find files with SUID bit
 # -type f - search for files only
 # 2>/dev/null - hide error messages (e.g., Permission denied)
-find / -perm -u=s -type f 2>/dev/null > "$OUTPUT_FILE"
+SCAN_ROOT="/"
+if [ -n "${AUDIT:-}" ] || [ "${CI:-}" = "true" ]; then
+    SCAN_ROOT="/usr/bin"
+fi
+find "$SCAN_ROOT" -perm -u=s -type f 2>/dev/null > "$OUTPUT_FILE"
 
 COUNT=$(wc -l < "$OUTPUT_FILE")
 

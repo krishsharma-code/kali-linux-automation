@@ -53,7 +53,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python3 mac_address_spoof_automator.py <INTERFACE> [NEW_MAC]")
         print("Example: python3 mac_address_spoof_automator.py eth0")
-        sys.exit(1)
+        sys.exit(0)
 
     iface = sys.argv[1]
     

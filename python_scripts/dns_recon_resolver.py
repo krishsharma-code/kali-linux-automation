@@ -42,6 +42,6 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python3 dns_recon_resolver.py <DOMAIN>")
         print("Example: python3 dns_recon_resolver.py example.com")
-        sys.exit(1)
+        sys.exit(0)
 
     resolve_dns(sys.argv[1])

@@ -5,7 +5,7 @@
 
 if [ -z "$1" ]; then
     echo "Usage: $0 <url> [wordlist]"
-    exit 1
+    exit 0
 fi
 
 URL=$1

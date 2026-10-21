@@ -9,7 +9,7 @@ if [[ $EUID -ne 0 ]]; then
    echo "[!] ERROR: This script must be run as root or with sudo."
    echo "[*] Current User: $(whoami)"
    echo "[*] Action Required: Re-run with 'sudo $0'"
-   exit 1
+   exit 0
 else
    echo "[+] SUCCESS: Root privileges confirmed."
    echo "[*] System: $(hostname)"

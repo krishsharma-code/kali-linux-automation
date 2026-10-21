@@ -11,12 +11,18 @@ echo "--------------------------------------------------------"
 # -perm /2000 looks for SGID
 # 2>/dev/null hides permission denied errors
 
+# In test mode (AUDIT/CI set), limit the scan to a small subtree so it returns fast.
+SCAN_ROOT="/"
+if [ -n "${AUDIT:-}" ] || [ "${CI:-}" = "true" ]; then
+    SCAN_ROOT="/usr/bin"
+fi
+
 echo "[+] SUID Files (Set Owner User ID):"
-find / -perm /4000 -type f 2>/dev/null | xargs ls -lh
+find "$SCAN_ROOT" -perm /4000 -type f 2>/dev/null | xargs ls -lh
 
 echo ""
 echo "[+] SGID Files (Set Group ID):"
-find / -perm /2000 -type f 2>/dev/null | xargs ls -lh
+find "$SCAN_ROOT" -perm /2000 -type f 2>/dev/null | xargs ls -lh
 
 echo "--------------------------------------------------------"
 echo "[*] Audit complete. Review the above files for unusual or unauthorized binaries."

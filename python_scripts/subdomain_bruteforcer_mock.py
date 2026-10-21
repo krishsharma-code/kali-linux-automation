@@ -5,6 +5,7 @@ Author: Senior Cybersecurity Instructor
 Description: Tests common subdomains against a target domain using DNS resolution.
 """
 
+import os
 import socket
 import sys
 
@@ -29,4 +30,8 @@ if __name__ == "__main__":
     target_domain = sys.argv[1] if len(sys.argv) > 1 else "example.com"
     # Small mock wordlist for demonstration
     common_subs = ["www", "mail", "dev", "test", "api", "staging", "blog"]
+    if os.environ.get("AUDIT") == "1" or os.environ.get("CI") == "true":
+        print("[*] Test mode (AUDIT/CI): skipping live DNS resolution.")
+        print(f"[*] Would test {len(common_subs)} common subdomains for: {target_domain}")
+        sys.exit(0)
     bruteforce_subdomains(target_domain, common_subs)

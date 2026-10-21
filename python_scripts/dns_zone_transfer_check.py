@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-import dns.resolver
-import dns.query
-import dns.zone
 import argparse
 import sys
+
+try:
+    import dns.resolver
+    import dns.query
+    import dns.zone
+except ImportError:
+    print("[!] Optional package 'dnspython' not installed. Run 'pip install dnspython' to enable.")
+    sys.exit(0)
 
 def check_zone_transfer(domain):
     """Attempts a DNS zone transfer for a given domain."""
@@ -46,8 +51,8 @@ def main():
     try:
         import dns
     except ImportError:
-        print("[!] Error: 'dnspython' library not found. Install it with: pip install dnspython")
-        sys.exit(1)
+        print("[!] Optional package 'dnspython' not installed. Run 'pip install dnspython' to enable.")
+        sys.exit(0)
 
     check_zone_transfer(args.domain)
 

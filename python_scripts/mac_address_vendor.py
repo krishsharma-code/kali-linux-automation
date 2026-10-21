@@ -19,6 +19,11 @@ def lookup_vendor(mac_address):
     return vendor_db.get(prefix, "Unknown Vendor")
 
 if __name__ == "__main__":
+    import sys
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print("Usage: python3 mac_address_vendor.py")
+        print("Looks up a MAC OUI vendor from the built-in mock database (interactive prompt).")
+        sys.exit(0)
     print("--- MAC Vendor Lookup (Mock) ---")
     test_mac = input("Enter MAC Address (e.g., 08:00:27:xx:xx:xx): ") or "08:00:27:AA:BB:CC"
     vendor = lookup_vendor(test_mac)

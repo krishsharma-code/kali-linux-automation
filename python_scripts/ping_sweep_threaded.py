@@ -46,6 +46,11 @@ def start_sweep(subnet):
     print("[*] Sweep complete.")
 
 if __name__ == "__main__":
+    import sys
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print("Usage: python3 ping_sweep_threaded.py")
+        print("Threaded ping sweep of a /24 subnet (interactive prompt).")
+        sys.exit(0)
     base_ip = input("Enter first three octets (e.g., 192.168.1): ") or "192.168.1"
     start_sweep(base_ip)
     # Stop the threads

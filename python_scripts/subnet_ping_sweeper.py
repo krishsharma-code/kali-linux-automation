@@ -39,8 +39,13 @@ def sweep_subnet(base_ip):
 
 def main():
     parser = argparse.ArgumentParser(description="Subnet Ping Sweeper")
-    parser.add_argument("subnet", help="The base subnet (e.g., 192.168.1)")
+    parser.add_argument("subnet", nargs="?", default=None, help="The base subnet (e.g., 192.168.1)")
     args = parser.parse_args()
+
+    if not args.subnet:
+        print("[!] No subnet supplied.")
+        print("    Usage: subnet_ping_sweeper.py <base_subnet>  (e.g. 192.168.1)")
+        return
 
     sweep_subnet(args.subnet)
 

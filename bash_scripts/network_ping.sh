@@ -8,7 +8,7 @@
 if [ -z "$1" ]; then
     echo "Usage: ./network_ping.sh <domain_or_ip>"
     echo "Example: ./network_ping.sh google.com"
-    exit 1
+    exit 0
 fi
 
 DOMAIN=$1

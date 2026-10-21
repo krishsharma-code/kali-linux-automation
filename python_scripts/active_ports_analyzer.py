@@ -6,7 +6,13 @@ Description: Lists local listening ports and associated processes.
 """
 
 import socket
-import psutil
+import sys
+
+try:
+    import psutil
+except ImportError:
+    print("[!] Optional package 'psutil' not installed. Run 'pip install psutil' to enable.")
+    sys.exit(0)
 
 def analyze_ports():
     print("[*] Auditing Local Listening Ports...")

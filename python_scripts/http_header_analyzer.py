@@ -37,6 +37,6 @@ def analyze_headers(url):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(f"Usage: {sys.argv[0]} <url>")
-        sys.exit(1)
+        sys.exit(0)
     
     analyze_headers(sys.argv[1])

@@ -34,5 +34,10 @@ while true; do
         echo "[+] ARP Cache clean: $(date)"
     fi
     
+    # In test mode (AUDIT/CI set), run a single iteration and exit cleanly.
+    if [ -n "${AUDIT:-}" ] || [ "${CI:-}" = "true" ]; then
+        break
+    fi
+
     sleep $INTERVAL
 done

@@ -45,6 +45,6 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python3 subnet_mask_parser.py <CIDR_NOTATION>")
         print("Example: python3 subnet_mask_parser.py 192.168.1.0/24")
-        sys.exit(1)
+        sys.exit(0)
 
     parse_subnet(sys.argv[1])

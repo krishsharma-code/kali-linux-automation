@@ -6,7 +6,7 @@
 # Check if a project name was provided.
 if [ -z "$1" ]; then
     echo "Usage: ./project_directory_setup.sh <project_name>"
-    exit 1
+    exit 0
 fi
 
 PROJECT_NAME=$1

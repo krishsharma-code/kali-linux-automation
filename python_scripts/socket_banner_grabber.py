@@ -21,6 +21,11 @@ def grab_banner(ip, port):
         s.close()
 
 if __name__ == "__main__":
+    import sys
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print("Usage: python3 socket_banner_grabber.py")
+        print("Grabs a service banner from an IP:port (interactive prompt).")
+        sys.exit(0)
     target = input("Enter Target IP: ") or "127.0.0.1"
     port = int(input("Enter Port (e.g., 22, 80): ") or "22")
     

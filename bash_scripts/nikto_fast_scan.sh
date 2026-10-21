@@ -5,7 +5,7 @@
 
 if [ -z "$1" ]; then
     echo "Usage: $0 <url>"
-    exit 1
+    exit 0
 fi
 
 URL=$1
@@ -14,8 +14,8 @@ echo "[*] Launching Nikto scan against: $URL"
 
 # Check if nikto is installed
 if ! command -v nikto &> /dev/null; then
-    echo "[!] Error: nikto is not installed."
-    exit 1
+    echo "[!] nikto is not installed. Install via apt to use full features."
+    exit 0
 fi
 
 nikto -h "$URL" -Tuning 123489

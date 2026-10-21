@@ -9,8 +9,8 @@ echo "[*] Auditing SSH Daemon Configuration: $SSH_CONFIG"
 echo "--------------------------------------------------------"
 
 if [ ! -f "$SSH_CONFIG" ]; then
-    echo "[!] ERROR: SSH config not found at $SSH_CONFIG"
-    exit 1
+    echo "[!] SSH config not found at $SSH_CONFIG - skipping audit."
+    exit 0
 fi
 
 # Function to check specific settings

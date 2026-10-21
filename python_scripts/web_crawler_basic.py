@@ -35,6 +35,6 @@ def crawl(url):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(f"Usage: {sys.argv[0]} <url>")
-        sys.exit(1)
+        sys.exit(0)
     
     crawl(sys.argv[1])

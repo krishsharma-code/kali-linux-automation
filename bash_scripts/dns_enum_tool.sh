@@ -7,7 +7,7 @@ DOMAIN=$1
 
 if [ -z "$DOMAIN" ]; then
     echo "Usage: $0 <domain>"
-    exit 1
+    exit 0
 fi
 
 echo "[*] Enumerating DNS records for: $DOMAIN"

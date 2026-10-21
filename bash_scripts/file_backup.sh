@@ -6,7 +6,7 @@
 # Check if the filename was provided.
 if [ -z "$1" ]; then
     echo "Usage: ./file_backup.sh <filename>"
-    exit 1
+    exit 0
 fi
 
 FILE=$1

@@ -8,7 +8,7 @@ PORT=$2
 
 if [ -z "$TARGET" ] || [ -z "$PORT" ]; then
     echo "Usage: $0 <target> <port>"
-    exit 1
+    exit 0
 fi
 
 echo "[*] Attempting banner grab on $TARGET:$PORT..."

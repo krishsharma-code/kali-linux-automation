@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# SAFE_HELP_GUARD: non-destructive --help (exits before any state change).
+import sys as _sys
+if "-h" in _sys.argv or "--help" in _sys.argv:
+    print("Usage: malicious_ip_blocker.py [options]")
+    print("This is a state-changing tool. --help makes no changes and exits.")
+    _sys.exit(0)
 import os
 
 def generate_ufw_rules(bad_ips_path, output_script):

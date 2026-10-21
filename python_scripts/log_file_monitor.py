@@ -19,6 +19,17 @@ def monitor_auth_log():
 
     print(f"[*] Monitoring {log_file} for failed SSH attempts (Type Ctrl+C to stop)...")
     
+    # In test mode (AUDIT/CI set), do a single pass and exit cleanly.
+    if os.environ.get("AUDIT") == "1" or os.environ.get("CI") == "true":
+        with open(log_file, "r") as f:
+            for line in f:
+                if "Failed password" in line or "Authentication failure" in line:
+                    print(f"[!!!] ALERT: {line.strip()}")
+                elif "Accepted password" in line:
+                    print(f"[+] Login Detected: {line.strip()}")
+        print("[*] Single test pass complete.")
+        return
+
     try:
         with open(log_file, "r") as f:
             # Go to the end of the file

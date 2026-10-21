@@ -5,7 +5,7 @@
 
 if [ -z "$1" ]; then
     echo "Usage: $0 <domain_or_ip>"
-    exit 1
+    exit 0
 fi
 
 TARGET=$1

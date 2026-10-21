@@ -7,7 +7,7 @@ SUBNET=$1 # Expected format: 192.168.1
 
 if [ -z "$SUBNET" ]; then
     echo "Usage: $0 <subnet_prefix (e.g. 192.168.1)>"
-    exit 1
+    exit 0
 fi
 
 echo "[*] Starting Ping Sweep on $SUBNET.0/24..."

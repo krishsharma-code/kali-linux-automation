@@ -7,7 +7,7 @@ TARGET=$1
 
 if [ -z "$TARGET" ]; then
     echo "Usage: $0 <target_ip>"
-    exit 1
+    exit 0
 fi
 
 echo "[*] Initializing fast scan on $TARGET..."

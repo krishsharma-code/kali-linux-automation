@@ -27,9 +27,14 @@ def get_banner(ip, port):
 
 def main():
     parser = argparse.ArgumentParser(description="Port Banner Grabber")
-    parser.add_argument("target", help="Target IP address")
+    parser.add_argument("target", nargs="?", default=None, help="Target IP address")
     parser.add_argument("--ports", help="Comma-separated list of ports", default="21,22,25,80,443,3306,8080")
     args = parser.parse_args()
+
+    if not args.target:
+        print("[!] No target supplied.")
+        print("    Usage: port_banner_grabber.py <target> [--ports 21,22,80]")
+        return
 
     ports = [int(p) for p in args.ports.split(",")]
     print(f"[*] Starting banner grabbing on {args.target}...")

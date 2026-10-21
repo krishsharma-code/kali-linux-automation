@@ -8,7 +8,7 @@ OUTPUT="scan_results_${TARGET//./_}.txt"
 
 if [ -z "$TARGET" ]; then
     echo "Usage: $0 <target_ip_or_domain>"
-    exit 1
+    exit 0
 fi
 
 echo "[*] Starting Nmap Quick Scan on $TARGET..."

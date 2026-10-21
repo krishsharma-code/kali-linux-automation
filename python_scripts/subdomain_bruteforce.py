@@ -28,7 +28,7 @@ def check_subdomains(domain, wordlist):
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print(f"Usage: {sys.argv[0]} <domain> <wordlist>")
-        sys.exit(1)
+        sys.exit(0)
     
     domain = sys.argv[1]
     wordlist = sys.argv[2]

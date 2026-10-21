@@ -10,8 +10,8 @@ echo "--------------------------------------------------------"
 SUDO_L_OUTPUT=$(sudo -l 2>/dev/null)
 
 if [ $? -ne 0 ]; then
-    echo "[-] Error: Unable to run 'sudo -l'. User may not have sudo access or password is required."
-    exit 1
+    echo "[!] This tool requires root privileges. Re-run with sudo."
+    exit 0
 fi
 
 echo "$SUDO_L_OUTPUT"

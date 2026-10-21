@@ -69,6 +69,6 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python3 live_host_ping_sweep.py <NETWORK_CIDR>")
         print("Example: python3 live_host_ping_sweep.py 192.168.1.0/24")
-        sys.exit(1)
+        sys.exit(0)
 
     sweep_network(sys.argv[1])

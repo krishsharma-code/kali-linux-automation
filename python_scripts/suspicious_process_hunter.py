@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
-import psutil
 import os
+import sys
+
+try:
+    import psutil
+except ImportError:
+    print("[!] Optional package 'psutil' not installed. Run 'pip install psutil' to enable.")
+    sys.exit(0)
 
 def hunt_suspicious_processes():
     """

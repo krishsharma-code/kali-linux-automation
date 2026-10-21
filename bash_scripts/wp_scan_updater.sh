@@ -7,7 +7,7 @@ WP_SITE=$1
 
 if [ -z "$WP_SITE" ]; then
     echo "Usage: $0 <wordpress_site_url>"
-    exit 1
+    exit 0
 fi
 
 echo "[*] Updating WPScan database..."

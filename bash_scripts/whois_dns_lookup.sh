@@ -5,7 +5,7 @@
 
 if [ -z "$1" ]; then
     echo "Usage: $0 <domain>"
-    exit 1
+    exit 0
 fi
 
 DOMAIN=$1

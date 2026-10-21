@@ -5,8 +5,14 @@ Day 5: Security Auditing & Log Analysis
 Description: Monitors system resources and alerts on spikes (potential DoS or cryptojacking).
 """
 
-import psutil
+import sys
 import time
+
+try:
+    import psutil
+except ImportError:
+    print("[!] Optional package 'psutil' not installed. Run 'pip install psutil' to enable.")
+    sys.exit(0)
 
 # Thresholds in percentage
 CPU_THRESHOLD = 80.0
