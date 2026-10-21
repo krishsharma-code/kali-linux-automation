@@ -26,10 +26,10 @@ assignees: ""
 
 <!-- How should it work? Include the expected command-line usage, e.g.
 
-     ./bash_scripts/121_log_rotator.sh --path /var/log --keep 7 --dry-run
+     ./bash_scripts/log_rotator.sh --path /var/log --keep 7 --dry-run
 -->
 
-**Proposed filename:** <!-- next free number, e.g. 121_log_rotator.sh -->
+**Proposed filename:** <!-- descriptive snake_case, e.g. log_rotator.sh -->
 
 ## Safety and Side Effects
 

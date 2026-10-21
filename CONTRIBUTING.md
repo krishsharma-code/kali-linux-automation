@@ -36,8 +36,8 @@ kali-linux-automation/
 │   ├── pull_request_template.md
 │   └── workflows/
 │       └── ci.yml
-├── bash_scripts/        # Shell scripts, numbered (01_*.sh ... 120_*.sh)
-├── python_scripts/      # Python scripts, numbered (01_*.py ... 115_*.py)
+├── bash_scripts/        # Shell scripts, descriptive snake_case names
+├── python_scripts/      # Python scripts, descriptive snake_case names
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
 ├── LICENSE
@@ -46,18 +46,18 @@ kali-linux-automation/
 
 - **`bash_scripts/`** holds shell scripts. Every file ends in `.sh`.
 - **`python_scripts/`** holds Python scripts. Every file ends in `.py`.
-- Both folders use a **numeric prefix** to keep the toolkit ordered:
-  `NN_snake_case_name.ext` — for example `105_api_key_leak_scanner.py`.
-- **Always use the next free number** in the relevant folder. Never renumber or
-  rename existing scripts; people link to them directly.
+- Both folders use **descriptive `snake_case` filenames** with no numeric prefix,
+  so a name states what the script does — for example `api_key_leak_scanner.py`.
+- **Choose a clear, unique name.** Do not reuse an existing filename, and avoid
+  generic names like `script.py` or `utils.sh`.
 
 ## Adding a New Script
 
 1. Pick the right folder for the language.
-2. Find the highest existing number in that folder and add one.
+2. Give the file a descriptive, unique `snake_case` name (no numeric prefix).
 3. Follow the standards below for that language.
-4. Add a one-line entry to the **script index in `README.md`**, in the correct
-   numeric position, so the index stays in sync with the folder.
+4. Add a one-line entry to the **script index in `README.md`**, in the module
+   section that matches the script, so the index stays in sync with the folder.
 5. Open a pull request using the template.
 
 ## Python Standards

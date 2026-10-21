@@ -8,7 +8,7 @@ assignees: ""
 
 ## Which script?
 
-<!-- Path to the script, e.g. bash_scripts/98_arp_cache_poison_detector.sh -->
+<!-- Path to the script, e.g. bash_scripts/arp_cache_poison_detector.sh -->
 
 **Script path:**
 **Language:** <!-- Python / Bash -->
