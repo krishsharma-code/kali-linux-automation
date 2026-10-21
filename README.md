@@ -145,6 +145,7 @@ This repository contains a suite of automation scripts that demonstrate core sys
 - **118_cronjob_auditor.sh**: (Day 14 Network & Environment Sec) Scans system/user cronjobs for suspicious persistence entries.
 - **119_usb_autorun_blocker.sh**: (Day 14 Network & Environment Sec) Prevents automated mounting and execution from USB devices.
 - **120_kali_update_cleaner.sh**: (Day 14 Network & Environment Sec) Performs deep maintenance, updates, and package cache cleaning.
+- **121_docker_container_audit.sh**: (Day 15 Container Security) Audits running Docker containers for privileged mode, host namespace sharing, and risky mounts.
 
 #### Day 2: File Ops & Network Recon
 - **01_file_permissions.sh**: Mastering `chmod` and execution rights.
@@ -181,4 +182,3 @@ chmod +x sys_info.sh
 ## 🔒 Ethical Disclaimer
 
 This toolkit is strictly for **educational, local system administration, and authorized testing purposes only**. Unauthorized use of these scripts against systems you do not have explicit permission to test is strictly prohibited. The author assumes no liability for misuse or damage caused by these tools.
-ility for misuse or damage caused by these tools.
