@@ -67,11 +67,8 @@ SSHD_FAILURE_PATTERN = re.compile(
 # PAM:      "authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.9"
 PAM_FAILURE_PATTERN = re.compile(r"authentication failure;.*\brhost=(\S+)")
 
-# Marker printed for addresses beyond MAX_TRACKED_ADDRESSES.
-OVERFLOW_KEY = "<overflow>"
-
-
 # --- Parsing helpers --------------------------------------------------------
+
 
 def normalise_address(token):
     """Return the canonical text form of an IP literal, or ``None``.
@@ -151,8 +148,8 @@ def count_failed_attempts(log_path, max_addresses=MAX_TRACKED_ADDRESSES):
     Args:
         log_path: Path to the log file.
         max_addresses: Maximum number of distinct addresses to track. Further
-            addresses are folded into the ``OVERFLOW_KEY`` bucket so memory
-            stays bounded on a flooded log.
+            addresses are counted in a single overflow tally instead, so
+            memory stays bounded on a flooded log.
 
     Returns:
         A ``(counts, overflow)`` tuple. ``counts`` maps address to attempt
