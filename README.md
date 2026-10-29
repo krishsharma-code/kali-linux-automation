@@ -126,6 +126,18 @@ Some scripts accept flags — pass `--help` to see the supported options, for ex
 ./bash_scripts/docker_container_audit.sh --help
 ```
 
+### Running the tests
+
+The Python scripts and the tested shell scripts have a pytest suite under `tests/`:
+
+```bash
+python3 -m pip install pytest
+python3 -m pytest tests -q
+```
+
+The shell-script tests drive each script through its real command-line interface
+with throwaway directories, so they never touch `/etc` and do not need root.
+
 ---
 
 ## 🧭 Script Index
@@ -222,7 +234,7 @@ Each table lists the script filename, its functional category, and a one-line de
 | `yara_rule_generator.py` | Signatures | Generates basic YARA rule syntax for signature matching. |
 | `check_root_privileges.sh` | Privilege Audit | Verifies root/sudo escalation rights. |
 | `find_suid_binaries.sh` | Privilege Audit | Locates SUID/SGID files for auditing. |
-| `backup_critical_configs.sh` | Backup | Automates secure backup of `/etc` files. |
+| `backup_critical_configs.sh` | Backup | Verified, owner-only backup of critical `/etc` files (`--dry-run`, `--keep`). |
 | `ssh_config_auditor.sh` | Hardening | Audits `sshd_config` against hardening rules. |
 | `firewall_status_checker.sh` | Firewall | Monitors UFW/iptables rules and status. |
 | `active_connections_monitor.sh` | Monitoring | Lists established connections and their PIDs. |
