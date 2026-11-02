@@ -229,7 +229,7 @@ Each table lists the script filename, its functional category, and a one-line de
 | `resource_spike_alert.py` | Monitoring | Watches CPU/RAM usage for anomalies. |
 | `auth_log_parser.py` | Log Analysis | Counts failed SSH logins from a mock `auth.log`. |
 | `file_integrity_watcher.py` | Integrity | Hashes critical files and alerts on changes. |
-| `malicious_ip_blocker.py` | Defense | Reads bad IPs and generates UFW block commands. |
+| `malicious_ip_blocker.py` | Defense | Validates an untrusted IP/CIDR feed and writes a reviewable UFW block script (`--dry-run`, `--demo`). |
 | `suspicious_process_hunter.py` | Monitoring | Flags processes running from unusual directories like `/tmp`. |
 | `yara_rule_generator.py` | Signatures | Generates basic YARA rule syntax for signature matching. |
 | `check_root_privileges.sh` | Privilege Audit | Verifies root/sudo escalation rights. |
