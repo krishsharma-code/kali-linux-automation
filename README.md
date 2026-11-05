@@ -308,7 +308,7 @@ Each table lists the script filename, its functional category, and a one-line de
 | `dns_zone_transfer_check.py` | Network Security | Attempts AXFR transfers to map internal DNS topology. |
 | `termux_environment_mapper.py` | Environment Security | Audits permissions and tools in mobile Termux environments. |
 | `ufw_rules_compiler.sh` | Hardening | Compiles net rules, clears dangling entries, hardens conntrack. |
-| `ssh_bruteforce_defense.sh` | Hardening | Dynamically blacklists malicious IPs from auth logs. |
+| `ssh_bruteforce_defense.sh` | Hardening | Ranks source IPs by failed SSH logins; reports only, denies with `--apply`. |
 | `kernel_parameter_tuner.sh` | Hardening | Hardens kernel parameters against spoofing and redirects. |
 | `untrusted_ppa_purger.sh` | Hardening | Verifies repository signatures and purges untrusted sources. |
 | `auditd_report_aggregator.sh` | Hardening | Compiles core logs and snapshots into a locked report. |
