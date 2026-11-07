@@ -259,7 +259,7 @@ Each table lists the script filename, its functional category, and a one-line de
 | `api_endpoint_fuzzer.py` | Vuln Scanning | Fuzzes common API paths and reports `200 OK` responses. |
 | `kali_usb_persistence_check.sh` | Forensics | Verifies partition health and mount status of a persistent Kali USB. |
 | `outbound_connection_monitor.sh` | Forensics | Logs suspicious outbound connections via `ss`/`netstat`. |
-| `file_integrity_monitor.sh` | Forensics | Cron-friendly hashing of critical files with change alerts. |
+| `file_integrity_monitor.sh` | Forensics | Cron-friendly SHA-256 baseline of critical files; records into `$XDG_STATE_HOME/file-integrity-monitor/` (mode 0600) and exits 1 on change, 2 on setup errors. |
 | `firewall_iptables_setup.sh` | Hardening | Configures basic defensive iptables rules (default-drop inbound). |
 | `suspicious_process_hunter.sh` | Forensics | Flags high-resource or suspiciously-located processes. |
 | `nmap_vuln_automator.sh` | Vuln Scanning | Runs Nmap with `--script vuln` and formats the output. |
