@@ -137,6 +137,8 @@ python3 -m pytest tests -q
 
 The shell-script tests drive each script through its real command-line interface
 with throwaway directories, so they never touch `/etc` and do not need root.
+`tests/test_shadow_file_integrity.py` does the same for the shadow auditor: it
+builds throwaway files in `tmp_path`, so it never inspects the real `/etc/shadow`.
 
 ---
 
@@ -298,7 +300,7 @@ Each table lists the script filename, its functional category, and a one-line de
 | Script | Category | Description |
 | :--- | :--- | :--- |
 | `process_anomaly_hunter.py` | Hardening | Inspects `/proc` for unlinked binaries and odd execution paths. |
-| `shadow_file_integrity.py` | Hardening | Audits `/etc/shadow` permissions and ownership. |
+| `shadow_file_integrity.py` | Hardening | Audits `/etc/shadow` type, permission bits (including setuid/setgid), owner and group without reading hashes; `--json`, `--fail-on`, exit codes for cron/CI. |
 | `netstat_log_parser.py` | Hardening | Detects unprivileged ports bound to public interfaces. |
 | `systemd_service_auditor.py` | Hardening | Flags services running from non-standard or risky paths. |
 | `api_key_leak_scanner.py` | Hardening | Regex-scans code for hardcoded API keys and secrets. |
