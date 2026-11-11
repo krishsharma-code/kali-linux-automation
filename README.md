@@ -319,7 +319,7 @@ Each table lists the script filename, its functional category, and a one-line de
 | `cronjob_audit_reporter.sh` | Hardening | Scans system/user cronjobs for suspicious persistence. |
 | `usb_autorun_blocker.sh` | Hardening | Blocks automated mounting and execution from USB devices. |
 | `kali_update_cleaner.sh` | Maintenance | Deep maintenance: system updates and package-cache cleaning. |
-| `docker_container_audit.sh` | Container Security | Read-only audit of containers for privileged mode, host namespaces, and risky mounts. |
+| `docker_container_audit.sh` | Container Security | Read-only audit for privileged mode, host namespaces, runtime-socket and host-path mounts (`-v` and `--mount`), dangerous capabilities and unconfined profiles. |
 
 ---
 
