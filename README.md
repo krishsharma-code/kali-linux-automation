@@ -256,7 +256,7 @@ Each table lists the script filename, its functional category, and a one-line de
 | `termux_environment_checker.py` | Environment | Validates packages, tools, and paths for a Termux environment. |
 | `cve_database_lookup.py` | Vuln Scanning | Queries a local JSON database for CVE details. |
 | `port_scanner_banner_grab.py` | Vuln Scanning | Multi-threaded port scan with service banner grabbing. |
-| `subdomain_takeover_check.py` | Vuln Scanning | Checks subdomains for dangling-CNAME takeover risk. |
+| `subdomain_takeover_check.py` | Vuln Scanning | Flags dangling-CNAME takeovers by matching provider error pages. Validates every host before building a URL, caps each response body at 512 KiB, does not follow redirects; exits 1 on a finding (usable as a CI gate) and 2 on bad usage. |
 | `vulnerability_report_generator.py` | Reporting | Formats scan results into a readable text/PDF report. |
 | `api_endpoint_fuzzer.py` | Vuln Scanning | Fuzzes common API paths and reports `200 OK` responses. |
 | `kali_usb_persistence_check.sh` | Forensics | Verifies partition health and mount status of a persistent Kali USB. |
